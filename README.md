@@ -2,21 +2,21 @@
 
 Este proyecto permite registrar sonidos de aves de manera automática usando una Raspberry Pi, un micrófono y una batería externa. Está pensado para su uso en ambientes naturales con grabaciones periódicas o activadas por sonido.
 
-## 🔧 Requisitos
+##  Requisitos
 - Raspberry Pi con Raspberry Pi OS
 - Micrófono lavalier o USB
 - Tarjeta de sonido USB (si se requiere)
 - Batería externa (opcional)
 - Conexión SSH/SCP para transferencia remota
 
-## 🛠 Instalación de dependencias
+##  Instalación de dependencias
 
 ```bash
 sudo apt update
 sudo apt install alsa-utils sox cron openssh-client
 ```
 
-## 🚀 Uso básico
+##  Uso básico
 
 ### Grabación periódica
 
@@ -30,7 +30,7 @@ bash grabacion/grabacion.sh
 bash deteccion_sonido/grabar_por_sonido.sh
 ```
 
-## 🔁 Automatización con cron
+##  Automatización con cron
 
 Ejecuta `crontab -e` y agrega:
 
@@ -38,7 +38,7 @@ Ejecuta `crontab -e` y agrega:
 */15 * * * * /home/pi/rpi-bioacustica/grabacion/grabacion.sh
 ```
 
-## 🔁 Transferencia remota
+##  Transferencia remota
 
 Edita `transferencia/subir_scp.sh` con tu IP y ejecuta:
 
